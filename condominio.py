@@ -1,4 +1,3 @@
-## Bienvenida Valentina 
 
 # Utilizar encapsulamiento
 # Discutir en grupo sobre el uso de variables de esta forma
@@ -10,7 +9,7 @@
 
 ''' Crear 2 instancias de edificios y 2 de condominios horizaontales y demuestre la utilizacion de atributos y metodos '''
 
-class Condominio:
+class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
     lista_guardias = []
@@ -71,8 +70,8 @@ class Condominio:
 
 
 
-class Guardia:
-    # 3 atributos y 4 metodos
+class Guardia: # Seba #  1xArithmeticError # 2xTypeError #Exception
+    # 3 atributos y 4 metodos OK
 
     empresa_contratista = 'Tus guardias'
     tipo_contrato = 'Contrato de plata'
@@ -95,8 +94,8 @@ class Guardia:
 
 
 
-class UnidadHabitacional:
-    # 3 atributos y 4 metodos
+class UnidadHabitacional: # Valentina # 1xAttributeError # 1xLookupError
+    # 3 atributos y 4 metodos OK
 
     tipo = 'Material sólido'
     cantidad_habitaciones = 6
@@ -116,8 +115,8 @@ class UnidadHabitacional:
 
 
 
-class CuentaCorriente:
-    # 3 atributos y 4 metodos
+class CuentaCorriente: # Walter # 1xImportError # NameError
+    # 3 atributos y 4 metodos OK
 
     banco = 'Banco Terra'
     tipo = 'Cuenta Corriente'
@@ -139,8 +138,9 @@ class CuentaCorriente:
         print('El saldo actual es', self.saldo)
 
 
-class Terreno:
-    # 6 atributos y 6 metodos
+class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
+    
+    # 6 atributos y 6 metodos OK
 
     nombre_dueño_terreno = 'Metropolis'
     seguros = 'terreno con seguros comprometidos'
@@ -160,124 +160,15 @@ class Terreno:
 
     def factibilidad_electricidad(self):
         print('100 por ciento de factibilidad de electricidad')
+        
 
     def factiilidad_servicios_digitales(self):
-        print('100 por ciento de factibilidad de servicios digitales')
+        self.message = '100 por ciento de factibilidad de servicios digitales'
+        self.naci_aqui = 'Soy un mensaje que viene de la clase Terreno'
+        return self.message, self.naci_aqui
 
     def seguridad_terreno(self):
         print('El terreno cuenta con todas las normas de seguridad para construir')
 
 
-
-
-# Crear dos clases con herencia multiple de las clases Terreno y Comunidad, que se llamen CondominioVertical y CondominioHorizontal
-
-class Comunidad:
-
-    buena_convivencia = 'Respeta las reglas de convivencia'
-
-    def __init__(self, nombre_comunidad):
-        self.nombre_comunidad = nombre_comunidad
-
-    def ComiteMascotas(self):
-        print('Ven a participar del comite de mascotas')
-
-    def JuegosPasatiempos(self):
-        print('Puedes visitar las áreas de esparcimiento')
-
-
-
-# Crear 5 atributos y 6 metodos propios que diferencien a cada una de estas subclases . Demostrar 2 casos de polimorfismo en metodos.
-class CondominioVertical(Terreno, Comunidad):
-
-    # 5 atributos
-    tipo_condominio_vertical = 'Edificios habitacionales'
-
-    def __init__(self, nombre_condominio_vertical):
-        self.nombre_condominio_vertical = nombre_condominio_vertical
-        super().factibilidad_agua_potable()
-
-    # llamamoa a métodos de la clase Terreno
-    
-    #super().factibilidad_electricidad()
-    #super().factiilidad_servicios_digitales()
-
-    # llamamos a métodos de la clase Comunidad
-    #super().ComiteMascotas()
-    #super().JuegosPasatiempos()
-
-    # métodos propios de la clase CondominioVertical
-    def Ascensor(self):
-        pass
-
-    def Terraza(self):
-        pass
-
-    def Quincho(sefl):
-        pass
-
-    def Piscina(self):
-        pass
-
-    def Gym(self):
-        pass
-
-
-
-
-
-class CondominioHorizontal(Terreno, Comunidad):
-    # 5 atributos
-    tipo_condominio_horizontal = 'Conjunto privado de casas'
-
-    def __init__(self, nombre_condominio_h):
-        self.nombre_condominio_h = nombre_condominio_h
-        # llamamoa a métodos de la clase Terreno
-        super().factibilidad_electricidad()
-        super().factiilidad_servicios_digitales(
-        super().factibilidad_agua_potable()
-
-
-
-)
-
-    # llamamos a métodos de la clase Comunidad
-    #super().ComiteMascotas()
-    #super().JuegosPasatiempos()
-
-    # métodos propios de la clase CondomioHorizontal
-
-    def Plaza(self):
-        pass
-
-    def Multicancha(self):
-        pass
-
-    def Estacionamietos(self):
-        pass
-
-    def PuntoVerde(self):
-        pass
-
-    def Minimarket(self):
-        pass
-
-
-
-if __name__ == "__main__":
-    # Pruebas de la clase Condominio
-    condominio1 = Condominio() # Creo instancia de condominio
-    print(condominio1.get_direccion()) # muestra direccion
-    condominio1.set_direccion("Esta es la nueva direccion") # cambio direccion
-    print(condominio1.get_direccion()) # imprimo direccion nueva
-    condominio1.set_administrador("Inserte aquí un administrador") # Agrego administrador
-    print(condominio1.get_administrador()) # imprimo nombre del administrador agregado
-    condominio1.add_guardia("Inserte aquí un guardia") # Agrego guardia a lista
-    print(condominio1.get_guardias()) # Imprimo lista de guardias
-    condominio1.add_guardia("Guardia a eliminar") # crear guardia para ser eliminado
-    print(condominio1.get_guardias()) # Imprimo lista de guardias, para verificacion
-    condominio1.del_guardia("Guardia a eliminar") # elimino guarida de lista
-    print(condominio1.get_guardias()) # Imprimo lista de guardias, para verificacion
-
-
-input()
+>>>>>>> rama_seba:condominio.py
