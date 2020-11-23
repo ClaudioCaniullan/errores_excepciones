@@ -10,7 +10,7 @@
 
 ''' Crear 2 instancias de edificios y 2 de condominios horizaontales y demuestre la utilizacion de atributos y metodos '''
 
-class Condominio: # Claudio 
+class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
     lista_guardias = []
@@ -71,7 +71,7 @@ class Condominio: # Claudio
 
 
 
-class Guardia: # Seba
+class Guardia: # Seba #  1xArithmeticError # 2xTypeError #Exception
     # 3 atributos y 4 metodos OK
 
     empresa_contratista = 'Tus guardias'
@@ -95,7 +95,7 @@ class Guardia: # Seba
 
 
 
-class UnidadHabitacional: # Valentina
+class UnidadHabitacional: # Valentina # 1xAttributeError # 1xLookupError
     # 3 atributos y 4 metodos OK
 
     tipo = 'Material sólido'
@@ -116,7 +116,7 @@ class UnidadHabitacional: # Valentina
 
 
 
-class CuentaCorriente: # Walter
+class CuentaCorriente: # Walter # 1xImportError # NameError
     # 3 atributos y 4 metodos OK
 
     banco = 'Banco Terra'
@@ -139,7 +139,8 @@ class CuentaCorriente: # Walter
         print('El saldo actual es', self.saldo)
 
 
-class Terreno: # Miguel
+class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
+    
     # 6 atributos y 6 metodos OK
 
     nombre_dueño_terreno = 'Metropolis'
