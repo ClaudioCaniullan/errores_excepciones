@@ -1,4 +1,4 @@
-import logging
+
 
 # Utilizar encapsulamiento
 # Discutir en grupo sobre el uso de variables de esta forma
@@ -126,9 +126,9 @@ class CuentaCorriente: # Walter # 1xImportError # NameError
     def __init__(self, titular, saldo):
         self.titular = titular
         self.saldo =saldo
-
+       
     def girar(self, giro):
-      
+        
         self.saldo -= giro
         print('Se ha efectuado un giro por el monto de', giro)
 
@@ -136,10 +136,11 @@ class CuentaCorriente: # Walter # 1xImportError # NameError
     def abono(self, abono):
         self.saldo += abono
         print('Se ha abonado la cantidad de', abono)
-        
+        from . import config
 
     def consulta_saldo(self):
         print('El saldo actual es', self.saldo)
+
 
 
 cuenta1 = CuentaCorriente("jose perez", 300000)
@@ -153,17 +154,42 @@ try:
 
 except NameError:
     print("los valores ingresados no son validos")
+
 except ValueError:
     print("los valores ingresados no son validos")
 
 
-cuenta1.abono(int(input("introduce el monto abonar: ")))
+try:
+    from . import config
+
+except ImportError:
+    print("modulo no importado correctamente")
+
+try: 
+    cuenta1.abono(int(input("introduce el monto abonar: ")))
+
+    from . import config
+
+except ValueError:
+    print("los valores ingresados no son validos")
+
+except ImportError:
+    print("modulo no importado correctamente")
+
 cuenta1.consulta_saldo()
 
+try:
+    from . import config
+
+except ImportError:
+    print("modulo no importado correctamente")
+
+cuenta1.consulta_saldo()
 
 print("Ejecucion de la transaccion finalizada")
 
-logging.basicConfig(filename = 'app.log', level = logging.info)
+
+
     
 
 '''class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
