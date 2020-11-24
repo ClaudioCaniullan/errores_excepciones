@@ -1,4 +1,4 @@
-
+import logging
 
 # Utilizar encapsulamiento
 # Discutir en grupo sobre el uso de variables de esta forma
@@ -10,7 +10,7 @@
 
 ''' Crear 2 instancias de edificios y 2 de condominios horizaontales y demuestre la utilizacion de atributos y metodos '''
 
-class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
+'''class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
     lista_guardias = []
@@ -112,7 +112,7 @@ class UnidadHabitacional: # Valentina # 1xAttributeError # 1xLookupError
         print('Se cierra la puerta del hogar numero', self.numero)
 
     def prender_luces(self):
-        print('Prender luces')
+        print('Prender luces')'''
 
 
 
@@ -128,18 +128,45 @@ class CuentaCorriente: # Walter # 1xImportError # NameError
         self.saldo =saldo
 
     def girar(self, giro):
+      
         self.saldo -= giro
         print('Se ha efectuado un giro por el monto de', giro)
+
 
     def abono(self, abono):
         self.saldo += abono
         print('Se ha abonado la cantidad de', abono)
+        
 
     def consulta_saldo(self):
         print('El saldo actual es', self.saldo)
 
 
-class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
+cuenta1 = CuentaCorriente("jose perez", 300000)
+
+'''raise ValueError("no se permiten letras")
+cuenta1.girar(asdasd)
+raise NameError("no se permiten letras")
+raise ValueError("no se permiten letras")'''
+try:
+    cuenta1.girar(int(input("introdusca el el monto a girar: ")))
+
+except NameError:
+    print("los valores ingresados no son validos")
+except ValueError:
+    print("los valores ingresados no son validos")
+
+
+cuenta1.abono(int(input("introduce el monto abonar: ")))
+cuenta1.consulta_saldo()
+
+
+print("Ejecucion de la transaccion finalizada")
+
+logging.basicConfig(filename = 'app.log', level = logging.info)
+    
+
+'''class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
     
     # 6 atributos y 6 metodos OK
 
@@ -169,6 +196,6 @@ class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
         return self.message, self.naci_aqui
 
     def seguridad_terreno(self):
-        print('El terreno cuenta con todas las normas de seguridad para construir')
+        print('El terreno cuenta con todas las normas de seguridad para construir')'''
 
 
