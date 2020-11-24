@@ -139,7 +139,7 @@ class CuentaCorriente: # Walter # 1xImportError # NameError
         print('El saldo actual es', self.saldo)
 
 
-class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
+class Terreno: # Miguel ZeroDivisionError GeneratorExit
     
     # 6 atributos y 6 metodos OK
 
@@ -171,4 +171,23 @@ class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
     def seguridad_terreno(self):
         print('El terreno cuenta con todas las normas de seguridad para construir')
 
+    def divisor_terreno(self): # ZeroDivisionError
+        ''' Indica en cuantas partes iguales puede dividir su terreno, ingresando parametro por usuario '''
 
+        print("Todos los terrenos cuenta con mil m² y tienes la posibilidad de calcular cuantos metros por terreno quedan luego de dividirlos")
+        self.divisor = int(input("Ingrese el numero de partes igual que desea para su terreno de mil m²\n>>> "))
+
+        try:
+            self.resultado = 1000 // self.divisor
+            print('si divides tu terreno por', self.divisor, 'cada uno de ellos tendra', self.resultado, 'm²')
+        except:
+            print("Realizaste una division por 0, espero disfrutes tu terreno de mil metros 'SOLO'")
+        finally:
+            print("Gracias por usar la superCalculadora todo terreno")
+
+######################## Trabajo realizado en clase Terreno ########################
+
+terrenito = Terreno("test")
+terrenito.divisor_terreno()
+
+######################## Trabajo realizado en clase Terreno ########################
