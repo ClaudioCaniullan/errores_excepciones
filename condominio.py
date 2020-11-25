@@ -1,31 +1,19 @@
 
-# Utilizar encapsulamiento
-# Discutir en grupo sobre el uso de variables de esta forma
-# Que es name mangling 
-# ¿Es   posible   acceder   un   atributo   definido como:
-#                           self.__nombre_atributo  desde   una subclase o desde el programaprincipal? 
-#                           Experimente y muestre ejemplos
 
-
-''' Crear 2 instancias de edificios y 2 de condominios horizaontales y demuestre la utilizacion de atributos y metodos '''
-
-class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
+class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
     lista_guardias = []
     num_unidades_habitacionales = 0
     lista_unidades = []
     cuenta_corriente = ""
-    
-    # atributos adicionales
-    áreas_verdes = 'Plaza principal'
-    sistema_riego = 'automatico'
-    tipo_cableado = 'bajo tierra'
-    camino_publico = 'cemento alta resistencia'
+   
+    # lista de atributos
+    lista_atributos = ['areas verdes', 'sistema riego', 'tipo cableado', 'camino publico']
 
-
-    def __init__(self):
-        pass
+    # agregue este constructor
+    def __init__(self, nombre):
+        self.nombre = nombre
 
     def get_direccion(self):
         return self.__direccion
@@ -54,7 +42,7 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     def get_unidades(self):
         return self.num_unidades_habitacionales
 
-    # Agregar 4 metodos adicionales Servicios REVISAR
+    # Agregar 4 metodos adicionales Servicios 
 
     def ServicioBasura(self):
         print('Recolección de basura servicios operativo')
@@ -67,6 +55,30 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
 
     def ServidioJardineria(self):
         print('Servicio de jardinerai gratis para propietarios')
+
+
+
+    # FALTA 1xStopIteration
+    # 1xValueError
+    def Emergencia(self):
+
+    		numero = int(input('Marque 911:'))
+
+    		try:
+    			if numero == 911:
+    				print('bien hecho')
+    			
+    		except ValueError:
+    			print('No marcaste correctamente')
+
+
+## verificación de errores
+condominio1 = Condominio('piraña')
+condominio1.Emergencia()
+
+
+
+
 
 
 
@@ -115,7 +127,7 @@ class UnidadHabitacional: # Valentina # 1xAttributeError # 1xLookupError
 
 
 
-class CuentaCorriente: # Walter # 1xImportError # NameError
+class CuentaCorriente: # Walter # 1xImportError # NameError 
     # 3 atributos y 4 metodos OK
 
     banco = 'Banco Terra'
@@ -171,4 +183,6 @@ class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
         print('El terreno cuenta con todas las normas de seguridad para construir')
 
 
->>>>>>> rama_seba:condominio.py
+
+
+input()
