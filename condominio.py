@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 
 # Utilizar encapsulamiento
@@ -326,12 +326,11 @@ class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
     # 1xValueError
     def Emergencia(self):
 
-    		numero = int(input('Marque 911:'))
+    		
 
     		try:
-    			if numero == 911:
-    				print('bien hecho')
-    			
+    			numero = int(input('Marque 911:'))
+    				
     		except ValueError:
     			print('No marcaste correctamente')
 
