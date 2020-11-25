@@ -139,7 +139,7 @@ class CuentaCorriente: # Walter # 1xImportError # NameError
         print('El saldo actual es', self.saldo)
 
 
-class Terreno: # Miguel ZeroDivisionError GeneratorExit
+class Terreno: # Miguel ZeroDivisionError, GeneratorExit
     
     # 6 atributos y 6 metodos OK
 
@@ -156,11 +156,29 @@ class Terreno: # Miguel ZeroDivisionError GeneratorExit
     def consulta_hta(self):
         print('Las hectareas edificafles consisten en 10 hectareas')
 
-    def factibilidad_agua_potable(self):
-        print('100 por ciento de factibilidad de agua potable')
+    def factibilidad_agua_potable(self): # SyntaxError
+        try:
+           print("Estoy generando un error de sintaxis por mala identacion")  # <---- Identado 3 espacios
+        except SyntaxError:
+            print("Eror de sintaxis, producido por mal identación")
+        finally:
+            print('100 por ciento de factibilidad de agua potable')
 
-    def factibilidad_electricidad(self):
-        print('100 por ciento de factibilidad de electricidad')
+    def factibilidad_electricidad(self): # SyntaxError
+
+        self.casa_id = input("Ingrese su ID para conocer el estado electrico de su domicilio\n>> ")
+        
+        self.listas_casas_elec_ok  = ["Casa1", "Casa2", "Casa3"]
+        try:   
+            if self.casa_id in self.listas_casas_elec_ok:
+                print("Tiene factibilidad")
+                #self.error = len(self.casa_id) = 4
+            else:
+                print("Sin factibilidad por el momento")    
+        except SyntaxError:
+            print("Error de sintaxis")
+        finally:
+            print('Disfrute electricidad limpia sin efectos secundarios')
         
 
     def factiilidad_servicios_digitales(self):
@@ -180,14 +198,20 @@ class Terreno: # Miguel ZeroDivisionError GeneratorExit
         try:
             self.resultado = 1000 // self.divisor
             print('si divides tu terreno por', self.divisor, 'cada uno de ellos tendra', self.resultado, 'm²')
-        except:
+        except ZeroDivisionError:
             print("Realizaste una division por 0, espero disfrutes tu terreno de mil metros 'SOLO'")
         finally:
             print("Gracias por usar la superCalculadora todo terreno")
 
-######################## Trabajo realizado en clase Terreno ########################
+######################## Trabajo realizado en clase Terreno -Inicio- ########################
+if __name__ == "__main__":
+    # ZeroDivisionError
+    # terrenito.divisor_terreno()
+    
+    # SyntaxError
+    terrenito = Terreno("test")
+    terrenito.factibilidad_agua_potable() # Error 1
+    #terrenito.factibilidad_electricidad() # Error 2
 
-terrenito = Terreno("test")
-terrenito.divisor_terreno()
 
-######################## Trabajo realizado en clase Terreno ########################
+######################## Trabajo realizado en clase Terreno -Fin- ########################
