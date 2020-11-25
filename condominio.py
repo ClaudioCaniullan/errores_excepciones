@@ -10,7 +10,7 @@
 
 ''' Crear 2 instancias de edificios y 2 de condominios horizaontales y demuestre la utilizacion de atributos y metodos '''
 
-'''class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
+class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
     lista_guardias = []
@@ -112,7 +112,7 @@ class UnidadHabitacional: # Valentina # 1xAttributeError # 1xLookupError
         print('Se cierra la puerta del hogar numero', self.numero)
 
     def prender_luces(self):
-        print('Prender luces')'''
+        print('Prender luces')
 
 
 
@@ -142,12 +142,10 @@ class CuentaCorriente: # Walter # 1xImportError # NameError
         print('El saldo actual es', self.saldo)
 
 
+
 cuenta1 = CuentaCorriente("jose perez", 300000)
 
-raise ValueError("no se permiten letras")
-cuenta1.girar(asdasd)
-raise NameError("no se permiten letras")
-raise ValueError("no se permiten letras")
+
 try:
     cuenta1.girar(int(input("introdusca el el monto a girar: ")))
 
@@ -188,10 +186,8 @@ cuenta1.consulta_saldo()
 print("Ejecucion de la transaccion finalizada")
 
 
+class Terreno: # Miguel ZeroDivisionError, GeneratorExit
 
-    
-
-'''class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
     
     # 6 atributos y 6 metodos OK
 
@@ -208,11 +204,28 @@ print("Ejecucion de la transaccion finalizada")
     def consulta_hta(self):
         print('Las hectareas edificafles consisten en 10 hectareas')
 
-    def factibilidad_agua_potable(self):
-        print('100 por ciento de factibilidad de agua potable')
+    def factibilidad_agua_potable(self): # SyntaxError
+        try:
+           print("Estoy generando un error de sintaxis por mala identacion")  # <---- Identado 3 espacios
+        except SyntaxError:
+            print("Eror de sintaxis, producido por mal identación")
+        finally:
+            print('100 por ciento de factibilidad de agua potable')
 
-    def factibilidad_electricidad(self):
-        print('100 por ciento de factibilidad de electricidad')
+    def factibilidad_electricidad(self): # SyntaxError
+
+        self.casa_id = input("Ingrese su ID para conocer el estado electrico de su domicilio\n>> ")
+        
+        self.listas_casas_elec_ok  = ["Casa1", "Casa2", "Casa3"]
+        try:   
+            if self.casa_id in self.listas_casas_elec_ok:
+                print("Tiene factibilidad")
+            else:
+                print("Sin factibilidad por el momento")    
+        except SyntaxError:
+            print("Error de sintaxis")
+        finally:
+            print('Disfrute electricidad limpia sin efectos secundarios')
         
 
     def factiilidad_servicios_digitales(self):
@@ -221,6 +234,31 @@ print("Ejecucion de la transaccion finalizada")
         return self.message, self.naci_aqui
 
     def seguridad_terreno(self):
-        print('El terreno cuenta con todas las normas de seguridad para construir')'''
+        print('El terreno cuenta con todas las normas de seguridad para construir')
+
+    def divisor_terreno(self): # ZeroDivisionError
+         #Indica en cuantas partes iguales puede dividir su terreno, ingresando parametro por usuario 
+
+        print("Todos los terrenos cuenta con mil m² y tienes la posibilidad de calcular cuantos metros por terreno quedan luego de dividirlos")
+        self.divisor = int(input("Ingrese el numero de partes igual que desea para su terreno de mil m²\n>>> "))
+
+        try:
+            self.resultado = 1000 // self.divisor
+            print('si divides tu terreno por', self.divisor, 'cada uno de ellos tendra', self.resultado, 'm²')
+        except ZeroDivisionError:
+            print("Realizaste una division por 0, espero disfrutes tu terreno de mil metros 'SOLO'")
+        finally:
+            print("Gracias por usar la superCalculadora todo terreno")
+
+######################## Trabajo realizado en clase Terreno -Inicio- ########################
+if __name__ == "__main__":
+    # ZeroDivisionError
+    # terrenito.divisor_terreno()
+    
+    # SyntaxError
+    terrenito = Terreno("test")
+    terrenito.factibilidad_agua_potable() # Error 1
+    # terrenito.factibilidad_electricidad() # Error 2
 
 
+######################## Trabajo realizado en clase Terreno -Fin- ########################
