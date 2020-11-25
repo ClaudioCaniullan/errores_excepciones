@@ -172,7 +172,6 @@ class Terreno: # Miguel ZeroDivisionError, GeneratorExit
         try:   
             if self.casa_id in self.listas_casas_elec_ok:
                 print("Tiene factibilidad")
-                #self.error = len(self.casa_id) = 4
             else:
                 print("Sin factibilidad por el momento")    
         except SyntaxError:
@@ -211,7 +210,7 @@ if __name__ == "__main__":
     # SyntaxError
     terrenito = Terreno("test")
     terrenito.factibilidad_agua_potable() # Error 1
-    #terrenito.factibilidad_electricidad() # Error 2
+    # terrenito.factibilidad_electricidad() # Error 2
 
 
 ######################## Trabajo realizado en clase Terreno -Fin- ########################
