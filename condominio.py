@@ -1,5 +1,4 @@
-<<<<<<< HEAD:Condominio_g4-m3/condominio.py
-## Bienvenida Valentina 
+<<<<<<< HEAD:Condominio_g4-m3/condominio.py 
 
 # Utilizar encapsulamiento
 # Discutir en grupo sobre el uso de variables de esta forma
@@ -455,6 +454,33 @@ class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
 
     def seguridad_terreno(self):
         print('El terreno cuenta con todas las normas de seguridad para construir')
+
+
+
+'''Errores:  Valentina- 1xAttributeError -1xLookupError
+'''
+while True:
+    try:
+        uh1=UnidadHabitacional(3)
+        uh1.nombre
+    except AttributeError as a: 
+        print(f"[Error de atributo]: {a}\n")
+        break
+        
+while True:
+    try:
+        uh2=UnidadHabitacional(1)
+        uh3=UnidadHabitacional(4)
+
+        unidadesH=[uh1,uh2,uh3]
+
+        unidadesH[5].tipo
+    except LookupError as a: 
+        print(f"[Error Lookup]: {a}\n")
+        break  
+
+
+
 
 
 >>>>>>> fdf0038507ef7deaa560ebd22f3d208eee5d8260:condominio.py
