@@ -142,13 +142,12 @@ class CuentaCorriente: # Walter # 1xImportError # NameError
         print('El saldo actual es', self.saldo)
 
 
-
 cuenta1 = CuentaCorriente("jose perez", 300000)
 
-'''raise ValueError("no se permiten letras")
+raise ValueError("no se permiten letras")
 cuenta1.girar(asdasd)
 raise NameError("no se permiten letras")
-raise ValueError("no se permiten letras")'''
+raise ValueError("no se permiten letras")
 try:
     cuenta1.girar(int(input("introdusca el el monto a girar: ")))
 
