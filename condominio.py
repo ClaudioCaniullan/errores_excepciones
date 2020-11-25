@@ -1,6 +1,4 @@
 
-
-
 # Utilizar encapsulamiento
 # Discutir en grupo sobre el uso de variables de esta forma
 # Que es name mangling 
@@ -326,8 +324,6 @@ class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
     # 1xValueError
     def Emergencia(self):
 
-    		
-
     		try:
     			numero = int(input('Marque 911:'))
     				
@@ -339,4 +335,26 @@ class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
 condominio1 = Condominio('piraña')
 condominio1.Emergencia()
 
+
+'''Errores:  Valentina- 1xAttributeError -1xLookupError
+'''
+while True:
+    try: # el error es por que el atributo no existe
+        uh1=UnidadHabitacional(3)
+        uh1.nombre
+    except AttributeError as a: 
+        print(f"[Error de atributo]: {a}\n")
+        break
+        
+while True:
+    try:
+        uh2=UnidadHabitacional(1)
+        uh3=UnidadHabitacional(4)
+
+        unidadesH=[uh1,uh2,uh3]
+
+        unidadesH[5].tipo # como no existe la quita ubicacion itra el error
+    except LookupError as a: 
+        print(f"[Error Lookup]: {a}\n")
+        break  
 
