@@ -53,29 +53,42 @@ class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
     def ServicioPlomeria(self):
         print('Servicio de plomeria gratis para propietarios')
 
+
+    # 1xStopIteration
     def ServidioJardineria(self):
-        print('Servicio de jardinerai gratis para propietarios')
+
+        try:
+            print('Servicio de jardinerai gratis para propietarios')
+            g = (i for i in 'OK')
+            l =next(g)
+            print(l)
+            m= next(g)
+            print(m)
+            # Generador de StopIteration
+            n = next(g)
+
+        except StopIteration as e:
+            print(e)
 
 
-
-    # FALTA 1xStopIteration
     # 1xValueError
     def Emergencia(self):
 
-    		numero = int(input('Marque 911:'))
-
     		try:
+                numero = int(input('Marque 911:'))
     			if numero == 911:
     				print('bien hecho')
-    			
+    		# Si no se ingresa el int 911 Genera ValueError
     		except ValueError:
     			print('No marcaste correctamente')
 
 
-## verificación de errores
+## Verificación de errores
+#1xValueError
 condominio1 = Condominio('piraña')
 condominio1.Emergencia()
-
+#1xStopIteration
+condominio1.ServidioJardineria()
 
 
 
