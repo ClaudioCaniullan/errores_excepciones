@@ -58,17 +58,15 @@ class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
     def ServidioJardineria(self):
 
         try:
-            print('Servicio de jardinerai gratis para propietarios')
             g = (i for i in 'OK')
             l =next(g)
             print(l)
             m= next(g)
             print(m)
-            # Generador de StopIteration
+            # este tercer elemento deberia generar un StopIteration
             n = next(g)
-
-        except StopIteration as e:
-            print(e)
+        except:
+            print('StopIteration: no existe n = next(g)')
 
 
     # 1xValueError
