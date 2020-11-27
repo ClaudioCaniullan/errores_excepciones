@@ -157,24 +157,24 @@ class Terreno: # Miguel ZeroDivisionError, GeneratorExit
         print('Las hectareas edificafles consisten en 10 hectareas')
 
     def factibilidad_agua_potable(self): # SyntaxError
-        try:
-           print("Estoy generando un error de sintaxis por mala identacion")  # <---- Identado 3 espacios
-        except SyntaxError:
-            print("Eror de sintaxis, producido por mal identación")
+        try:        
+            print "Hola"
+        except SyntaxError as e:
+            print(type(e).__name__)
         finally:
             print('100 por ciento de factibilidad de agua potable')
 
     def factibilidad_electricidad(self): # SyntaxError
 
-        self.casa_id = input("Ingrese su ID para conocer el estado electrico de su domicilio\n>> ")
-        
-        self.listas_casas_elec_ok  = ["Casa1", "Casa2", "Casa3"]
         try:   
+            self.casa_id = input("Ingrese su ID para conocer el estado electrico de su domicilio\n>> ")
+            self.listas_casas_elec_ok  = ["Casa1", "Casa2", "Casa3"]
             if self.casa_id in self.listas_casas_elec_ok:
                 print("Tiene factibilidad")
+
             else:
                 print("Sin factibilidad por el momento")    
-        except SyntaxError:
+        except SyntaxError as e:
             print("Error de sintaxis")
         finally:
             print('Disfrute electricidad limpia sin efectos secundarios')
