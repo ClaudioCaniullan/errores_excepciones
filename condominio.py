@@ -299,21 +299,16 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     def ServidioJardineria(self):
         print('Servicio de jardinerai gratis para propietarios')
 
-        try:
-            numero = int(input('Marque 911:'))
-                    
-        except ValueError:
-            print('No marcaste correctamente')
-
-
-    # FALTA 1xStopIteration
-    # 1xValueError
-    
 try:
     numero = int(input('Marque 911:'))
                     
 except ValueError:
     print('No marcaste correctamente')
+
+
+    # FALTA 1xStopIteration
+    # 1xValueError
+    
 
 
 print("----------Errores de AttributeError, LookupError------------")
