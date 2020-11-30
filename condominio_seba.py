@@ -71,7 +71,7 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
 
 
 
-class Guardia: # Seba #  1xArithmeticError # 1ValueError #2TypeError
+class Guardia: # Seba #  1xArithmeticError # 2xTypeError
     # 3 atributos y 4 metodos OK
 
     empresa_contratista = 'Tus guardias'
