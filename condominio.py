@@ -203,13 +203,10 @@ class Terreno: # Miguel ZeroDivisionError, GeneratorExit
     def consulta_hta(self):
         print('Las hectareas edificafles consisten en 10 hectareas')
 
-    def factibilidad_agua_potable(self): # SyntaxError
-        try:
-           print("Estoy generando un error de sintaxis por mala identacion")  # <---- Identado 3 espacios
-        except SyntaxError:
-            print("Eror de sintaxis, producido por mal identación")
-        finally:
-            print('100 por ciento de factibilidad de agua potable')
+    #def factibilidad_agua_potable(self): # SyntaxError
+       
+        
+
 
     def factibilidad_electricidad(self): # SyntaxError
 
@@ -358,3 +355,9 @@ while True:
         print(f"[Error Lookup]: {a}\n")
         break  
 
+
+
+try:
+    print("Hola"))
+except SyntaxError:
+    print("Hay un error de sintaxis")
