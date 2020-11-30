@@ -141,10 +141,8 @@ class CuentaCorriente: # Walter # 1xImportError # NameError
         print('El saldo actual es', self.saldo)
 
 
-
+print("---------Errores de NameError, ValueError, ImportError------------")
 cuenta1 = CuentaCorriente("jose perez", 300000)
-
-
 try:
     cuenta1.girar(int(input("introdusca el el monto a girar: ")))
 
@@ -184,7 +182,7 @@ cuenta1.consulta_saldo()
 
 print("Ejecucion de la transaccion finalizada")
 
-
+print("----------- errores de SyntaxError-----------")
 class Terreno: # Miguel ZeroDivisionError, GeneratorExit
 
     
@@ -205,10 +203,7 @@ class Terreno: # Miguel ZeroDivisionError, GeneratorExit
 
     #def factibilidad_agua_potable(self): # SyntaxError
        
-        
-
-
-    def factibilidad_electricidad(self): # SyntaxError
+    def factibilidad_electricidad(self): # 
 
         self.casa_id = input("Ingrese su ID para conocer el estado electrico de su domicilio\n>> ")
         
@@ -246,27 +241,16 @@ class Terreno: # Miguel ZeroDivisionError, GeneratorExit
         finally:
             print("Gracias por usar la superCalculadora todo terreno")
 
-######################## Trabajo realizado en clase Terreno -Inicio- ########################
-if __name__ == "__main__":
-    # ZeroDivisionError
-    # terrenito.divisor_terreno()
-    
-    # SyntaxError
-    terrenito = Terreno("test")
-    terrenito.factibilidad_agua_potable() # Error 1
-    # terrenito.factibilidad_electricidad() # Error 2
 
-
-######################## Trabajo realizado en clase Terreno -Fin- ########################
-
-class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
+print(" -------- Errores de ValueError ---------")
+class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
     lista_guardias = []
     num_unidades_habitacionales = 0
     lista_unidades = []
     cuenta_corriente = ""
-   
+
     # lista de atributos
     lista_atributos = ['areas verdes', 'sistema riego', 'tipo cableado', 'camino publico']
 
@@ -315,24 +299,24 @@ class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
     def ServidioJardineria(self):
         print('Servicio de jardinerai gratis para propietarios')
 
+        try:
+            numero = int(input('Marque 911:'))
+                    
+        except ValueError:
+            print('No marcaste correctamente')
 
 
     # FALTA 1xStopIteration
     # 1xValueError
-    def Emergencia(self):
-
-    		try:
-    			numero = int(input('Marque 911:'))
-    				
-    		except ValueError:
-    			print('No marcaste correctamente')
-
-
-## verificación de errores
-condominio1 = Condominio('piraña')
-condominio1.Emergencia()
+    
+try:
+    numero = int(input('Marque 911:'))
+                    
+except ValueError:
+    print('No marcaste correctamente')
 
 
+print("----------Errores de AttributeError, LookupError------------")
 '''Errores:  Valentina- 1xAttributeError -1xLookupError
 '''
 while True:
@@ -357,7 +341,4 @@ while True:
 
 
 
-try:
-    print("Hola"))
-except SyntaxError:
-    print("Hay un error de sintaxis")
+
