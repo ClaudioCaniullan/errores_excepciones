@@ -71,24 +71,51 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
 
 
 
-class Guardia: # Seba #  1xArithmeticError # 2xTypeError #Exception
+class Guardia: # Seba #  1xArithmeticError # 2xTypeError
     # 3 atributos y 4 metodos OK
 
     empresa_contratista = 'Tus guardias'
     tipo_contrato = 'Contrato de plata'
     sueldo_bruto = '800.000 mil pesos'
 
-    
     def __init__(self, nombre, rut, sexo):
         self.nombre = nombre
         self.rut = rut
         self.sexo = sexo
 
-    def desayunar(self):
-        print("8:00 am hora de desayunar en el casino")
-
-    def almuerzo(self):
-        print('13:00 pm hora de almorzar en el casino')
+    def marcar_desayuno(self):
+      while True:
+        try:
+          desayunar = int(input("Ingrese hora marcación: "))
+          if desayunar == 8:
+            print("8:00 am hora de desayunar en el casino")
+            break
+          elif desayunar != 8:
+            print("El desayuno debe ser a las 8 A.M: ")
+            continue
+        except ValueError as ve:
+            print( type(ve).__name__ , ": No se puede comparar un string con un int" )
+        finally:
+            print("Secuencia completada")
+ 
+    def remuneraciones_guardia(self):
+      while True:
+        try:
+            sueldo_base = int(input("Ingrese su sueldo base: "))
+            horas_extras = str(input("Ingrese las horas extras realizadas: "))
+            if sueldo_base > 0 and horas_extras > 0:
+                total_sueldo = horas_extras + sueldo_base
+                print(total_sueldo)
+                break
+        except TypeError as e:
+            print( type(e).__name__ , ": No se puede sumar un entero con un string" )
+            break
+        except ValueError as v:
+            print( type(v).__name__ , ": No se puede comparar un string con un int" )
+        finally:
+            print("Secuencia completada")
+    def vacaciones_guardia(self):
+        pass
 
     def fin_jornada(self):
         print('17:00 pm hora de fin de jornada')
@@ -171,4 +198,9 @@ class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
     def seguridad_terreno(self):
         print('El terreno cuenta con todas las normas de seguridad para construir')
 
+
+## Pruebas clase Guardia
+guardia_1 = Guardia("Sebastian", "17920757-5","M") #Se crea instancia Guardia
+guardia_1.remuneraciones_guardia() # datos solicitados por pantalla , se genera error 
+guardia_1.marcar_desayuno() #datos solicitados por pantalla 
 
