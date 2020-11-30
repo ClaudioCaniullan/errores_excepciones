@@ -115,7 +115,17 @@ class Guardia: # Seba #  1xArithmeticError # 2xTypeError
         finally:
             print("Secuencia completada")
     def vacaciones_guardia(self):
-        pass
+        try:
+            vacaciones_totales = 0
+            dias_pedir = int(input("Ingrese días pedir: "))
+            total = dias_pedir/vacaciones_totales
+            print(total)
+        except ArithmeticError:
+            print("ArithmeticError: La operación no puede retornar un valor infinito")
+        except Exception as e:
+            print( type(e).__name__ , ": No se puede comparar un string con un int" )
+        finally:
+            print("Secuencia completa")
 
     def fin_jornada(self):
         print('17:00 pm hora de fin de jornada')
@@ -201,6 +211,6 @@ class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
 
 ## Pruebas clase Guardia
 guardia_1 = Guardia("Sebastian", "17920757-5","M") #Se crea instancia Guardia
-guardia_1.remuneraciones_guardia() # datos solicitados por pantalla , se genera error 
-guardia_1.marcar_desayuno() #datos solicitados por pantalla 
-
+#guardia_1.remuneraciones_guardia() # datos solicitados por pantalla , se genera error 
+#guardia_1.marcar_desayuno() #datos solicitados por pantalla 
+guardia_1.vacaciones_guardia()
