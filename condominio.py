@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 # Utilizar encapsulamiento
 # Discutir en grupo sobre el uso de variables de esta forma
 # Que es name mangling 
@@ -9,6 +13,10 @@
 
 ''' Crear 2 instancias de edificios y 2 de condominios horizaontales y demuestre la utilizacion de atributos y metodos '''
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
@@ -69,20 +77,29 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
         print('Servicio de jardinerai gratis para propietarios')
 
 
+<<<<<<< HEAD
 
 class Guardia: # Seba #  1xArithmeticError # 2xTypeError #Exception
+=======
+print("-----------Error ValueError, TypeError, ArithmeticError, Exception-----------")
+class Guardia: # Seba #  1xArithmeticError # 1ValueError #2TypeError
+>>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
     # 3 atributos y 4 metodos OK
 
     empresa_contratista = 'Tus guardias'
     tipo_contrato = 'Contrato de plata'
     sueldo_bruto = '800.000 mil pesos'
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
     def __init__(self, nombre, rut, sexo):
         self.nombre = nombre
         self.rut = rut
         self.sexo = sexo
 
+<<<<<<< HEAD
     def desayunar(self):
         print("8:00 am hora de desayunar en el casino")
 
@@ -92,6 +109,62 @@ class Guardia: # Seba #  1xArithmeticError # 2xTypeError #Exception
     def fin_jornada(self):
         print('17:00 pm hora de fin de jornada')
 
+=======
+    def marcar_desayuno(self):
+      while True:
+        try:
+          desayunar = int(input("Ingrese hora marcación salir con numero 8: "))
+          if desayunar == 8:
+            print("8:00 am hora de desayunar en el casino")
+            break
+          elif desayunar != 8:
+            print("El desayuno debe ser a las 8 A.M: ")
+            continue
+        except ValueError as ve:
+            print( type(ve).__name__ , ": No se puede comparar un string con un int" )
+        finally:
+            print("Secuencia completada")
+ 
+    def remuneraciones_guardia(self):
+      while True:
+        try:
+            sueldo_base = int(input("Ingrese su sueldo base: "))
+            horas_extras = str(input("Ingrese las horas extras realizadas: "))
+            if sueldo_base > 0 and horas_extras > 0:
+                total_sueldo = horas_extras + sueldo_base
+                print(total_sueldo)
+                break
+        except TypeError as e:
+            print( type(e).__name__ , ": No se puede sumar un entero con un string" )
+            break
+        except ValueError as v:
+            print( type(v).__name__ , ": No se puede comparar un string con un int" )
+        finally:
+            print("Secuencia completada")
+
+            
+    def vacaciones_guardia(self):
+        try:
+            vacaciones_totales = 0
+            dias_pedir = int(input("Ingrese días pedir: "))
+            total = dias_pedir/vacaciones_totales
+            print(total)
+        except ArithmeticError:
+            print("ArithmeticError: La operación no puede retornar un valor infinito")
+        except Exception as e:
+            print( type(e).__name__ , ": No se puede comparar un string con un int" )
+        finally:
+            print("Secuencia completa")
+
+    def fin_jornada(self):
+        print('17:00 pm hora de fin de jornada')
+## Pruebas clase Guardia
+
+guardia_1 = Guardia("Sebastian", "17920757-5","M") #Se crea instancia Guardia
+guardia_1.remuneraciones_guardia() # datos solicitados por pantalla , se genera error 
+guardia_1.marcar_desayuno() #datos solicitados por pantalla 
+guardia_1.vacaciones_guardia() #error aritmetico
+>>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 
 
 class UnidadHabitacional: # Valentina # 1xAttributeError # 1xLookupError
@@ -183,6 +256,10 @@ cuenta1.consulta_saldo()
 print("Ejecucion de la transaccion finalizada")
 
 print("----------- errores de SyntaxError-----------")
+<<<<<<< HEAD
+=======
+
+>>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 class Terreno: # Miguel ZeroDivisionError, GeneratorExit
 
     
@@ -227,11 +304,21 @@ class Terreno: # Miguel ZeroDivisionError, GeneratorExit
     def seguridad_terreno(self):
         print('El terreno cuenta con todas las normas de seguridad para construir')
 
+<<<<<<< HEAD
     
 
         
 
 print(" -------- Errores de ValueError ---------")
+=======
+    def divisor_terreno(self): # ZeroDivisionError
+         #Indica en cuantas partes iguales puede dividir su terreno, ingresando parametro por usuario 
+
+        print("Todos los terrenos cuenta con mil m² y tienes la posibilidad de calcular cuantos metros por terreno quedan luego de dividirlos")
+       
+
+
+>>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
@@ -288,6 +375,7 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     def ServidioJardineria(self):
         print('Servicio de jardinerai gratis para propietarios')
 
+<<<<<<< HEAD
 try:
     numero = int(input('Marque 911:'))
                     
@@ -299,6 +387,8 @@ except ValueError:
     # 1xValueError
     
 
+=======
+>>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 
 print("----------Errores de AttributeError, LookupError------------")
 '''Errores:  Valentina- 1xAttributeError -1xLookupError
@@ -323,6 +413,7 @@ while True:
         print(f"[Error Lookup]: {a}\n")
         break  
 
+<<<<<<< HEAD
 
 
 
@@ -337,3 +428,114 @@ except ZeroDivisionError:
     print("Realizaste una division por 0, espero disfrutes tu terreno de mil metros 'SOLO'")
 finally:
     print("Gracias por usar la superCalculadora todo terreno")
+=======
+print("---------Error StopIteration, ValueError-----------")
+class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
+    __direccion = "Las blancas palomas 1457, Buin"
+    lista_administrador = []
+    lista_guardias = []
+    num_unidades_habitacionales = 0
+    lista_unidades = []
+    cuenta_corriente = ""
+   
+    # lista de atributos
+    lista_atributos = ['areas verdes', 'sistema riego', 'tipo cableado', 'camino publico']
+
+    # agregue este constructor
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def get_direccion(self):
+        return self.__direccion
+
+    def set_direccion(self, new_adress):
+        self.__direccion = new_adress
+
+    def set_administrador(self, admin):
+        self.lista_administrador = admin
+
+    def get_administrador(self):
+        return self.lista_administrador
+
+    def add_guardia(self, new_guard):
+        self.lista_guardias.append(new_guard)
+
+    def del_guardia(self, del_guard):
+        if del_guard in self.lista_guardias:
+            self.lista_guardias.remove(del_guard)
+        else:
+            print("No se puede eliminar, guardia no existe en registros")
+
+    def get_guardias(self):
+        return self.lista_guardias
+
+    def get_unidades(self):
+        return self.num_unidades_habitacionales
+
+    # Agregar 4 metodos adicionales Servicios 
+
+    def ServicioBasura(self):
+        print('Recolección de basura servicios operativo')
+
+    def ServicioGasfiter(self):
+        print('Servicio de Gasfiter gratis para propietarios')
+
+    def ServicioPlomeria(self):
+        print('Servicio de plomeria gratis para propietarios')
+
+
+    # 1xStopIteration
+    def ServidioJardineria(self):
+
+        try:
+            g = (i for i in 'OK')
+            l =next(g)
+            print(l)
+            m= next(g)
+            print(m)
+            # este tercer elemento deberia generar un StopIteration
+            n = next(g)
+        except:
+            print('StopIteration: no existe n = next(g)')
+
+
+    # 1xValueError
+    def Emergencia(self):
+
+        try:
+            numero = int(input('Marque 911:'))
+            if numero == 911:
+                print('bien hecho')
+    		# Si no se ingresa el int 911 Genera ValueError
+        except ValueError:
+            print('No marcaste correctamente')
+
+
+## Verificación de errores
+#1xValueError
+condominio1 = Condominio('piraña')
+condominio1.Emergencia()
+#1xStopIteration
+condominio1.ServidioJardineria()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
