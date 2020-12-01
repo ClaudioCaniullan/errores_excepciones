@@ -130,7 +130,12 @@ class Guardia: # Seba #  1xArithmeticError # 1ValueError #2TypeError
 
     def fin_jornada(self):
         print('17:00 pm hora de fin de jornada')
+## Pruebas clase Guardia
 
+guardia_1 = Guardia("Sebastian", "17920757-5","M") #Se crea instancia Guardia
+guardia_1.remuneraciones_guardia() # datos solicitados por pantalla , se genera error 
+guardia_1.marcar_desayuno() #datos solicitados por pantalla 
+guardia_1.vacaciones_guardia() #error aritmetico
 
 
 class UnidadHabitacional: # Valentina # 1xAttributeError # 1xLookupError
@@ -270,17 +275,7 @@ class Terreno: # Miguel ZeroDivisionError, GeneratorExit
          #Indica en cuantas partes iguales puede dividir su terreno, ingresando parametro por usuario 
 
         print("Todos los terrenos cuenta con mil m² y tienes la posibilidad de calcular cuantos metros por terreno quedan luego de dividirlos")
-        self.divisor = int(input("Ingrese el numero de partes igual que desea para su terreno de mil m²\n>>> "))
-
-        try:
-            self.resultado = 1000 // self.divisor
-            print('si divides tu terreno por', self.divisor, 'cada uno de ellos tendra', self.resultado, 'm²')
-        except ZeroDivisionError:
-            print("Realizaste una division por 0, espero disfrutes tu terreno de mil metros 'SOLO'")
-        finally:
-            print("Gracias por usar la superCalculadora todo terreno")
-
-
+       
 print(" -------- Errores de ValueError ---------")
 class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
