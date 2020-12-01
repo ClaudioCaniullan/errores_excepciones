@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 # Utilizar encapsulamiento
 # Discutir en grupo sobre el uso de variables de esta forma
@@ -9,6 +9,7 @@
 
 
 ''' Crear 2 instancias de edificios y 2 de condominios horizaontales y demuestre la utilizacion de atributos y metodos '''
+
 
 class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
@@ -70,7 +71,7 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
         print('Servicio de jardinerai gratis para propietarios')
 
 
-
+print("-----------Error ValueError, TypeError, ArithmeticError, Exception-----------")
 class Guardia: # Seba #  1xArithmeticError # 1ValueError #2TypeError
     # 3 atributos y 4 metodos OK
 
@@ -86,7 +87,7 @@ class Guardia: # Seba #  1xArithmeticError # 1ValueError #2TypeError
     def marcar_desayuno(self):
       while True:
         try:
-          desayunar = int(input("Ingrese hora marcación: "))
+          desayunar = int(input("Ingrese hora marcación salir con numero 8: "))
           if desayunar == 8:
             print("8:00 am hora de desayunar en el casino")
             break
@@ -228,6 +229,7 @@ cuenta1.consulta_saldo()
 print("Ejecucion de la transaccion finalizada")
 
 print("----------- errores de SyntaxError-----------")
+
 class Terreno: # Miguel ZeroDivisionError, GeneratorExit
 
     
@@ -277,7 +279,8 @@ class Terreno: # Miguel ZeroDivisionError, GeneratorExit
 
         print("Todos los terrenos cuenta con mil m² y tienes la posibilidad de calcular cuantos metros por terreno quedan luego de dividirlos")
        
-print(" -------- Errores de ValueError ---------")
+
+
 class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
@@ -334,17 +337,6 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     def ServidioJardineria(self):
         print('Servicio de jardinerai gratis para propietarios')
 
-try:
-    numero = int(input('Marque 911:'))
-                    
-except ValueError:
-    print('No marcaste correctamente')
-
-
-    # FALTA 1xStopIteration
-    # 1xValueError
-    
-
 
 print("----------Errores de AttributeError, LookupError------------")
 '''Errores:  Valentina- 1xAttributeError -1xLookupError
@@ -369,17 +361,7 @@ while True:
         print(f"[Error Lookup]: {a}\n")
         break  
 
-
-
-
-## Pruebas clase Guardia
-guardia_1 = Guardia("Sebastian", "17920757-5","M") #Se crea instancia Guardia
-guardia_1.remuneraciones_guardia() # datos solicitados por pantalla , se genera error 
-guardia_1.marcar_desayuno() #datos solicitados por pantalla 
-guardia_1.vacaciones_guardia() #error aritmetico
-=======
-
-
+print("---------Error StopIteration, ValueError-----------")
 class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
@@ -452,13 +434,13 @@ class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
     # 1xValueError
     def Emergencia(self):
 
-    		try:
-                numero = int(input('Marque 911:'))
-    			if numero == 911:
-    				print('bien hecho')
+        try:
+            numero = int(input('Marque 911:'))
+            if numero == 911:
+                print('bien hecho')
     		# Si no se ingresa el int 911 Genera ValueError
-    		except ValueError:
-    			print('No marcaste correctamente')
+        except ValueError:
+            print('No marcaste correctamente')
 
 
 ## Verificación de errores
@@ -473,108 +455,18 @@ condominio1.ServidioJardineria()
 
 
 
-class Guardia: # Seba #  1xArithmeticError # 2xTypeError #Exception
-    # 3 atributos y 4 metodos OK
-
-    empresa_contratista = 'Tus guardias'
-    tipo_contrato = 'Contrato de plata'
-    sueldo_bruto = '800.000 mil pesos'
-
-    
-    def __init__(self, nombre, rut, sexo):
-        self.nombre = nombre
-        self.rut = rut
-        self.sexo = sexo
-
-    def desayunar(self):
-        print("8:00 am hora de desayunar en el casino")
-
-    def almuerzo(self):
-        print('13:00 pm hora de almorzar en el casino')
-
-    def fin_jornada(self):
-        print('17:00 pm hora de fin de jornada')
-
-
-
-class UnidadHabitacional: # Valentina # 1xAttributeError # 1xLookupError
-    # 3 atributos y 4 metodos OK
-
-    tipo = 'Material sólido'
-    cantidad_habitaciones = 6
-    extras = 'calefaccion central y aire acondicionado'
-
-    def __init__(self, numero):
-        self.numero = numero 
-
-    def abrir_puerta(self):
-        print('Se abre la puerta del hogar numero', self.numero)
-
-    def cerrar_puerta(self):
-        print('Se cierra la puerta del hogar numero', self.numero)
-
-    def prender_luces(self):
-        print('Prender luces')
-
-
-
-class CuentaCorriente: # Walter # 1xImportError # NameError 
-    # 3 atributos y 4 metodos OK
-
-    banco = 'Banco Terra'
-    tipo = 'Cuenta Corriente'
-    beneficios = 'No se cobra comision en ninguna operación'
-    
-    def __init__(self, titular, saldo):
-        self.titular = titular
-        self.saldo =saldo
-
-    def girar(self, giro):
-        self.saldo -= giro
-        print('Se ha efectuado un giro por el monto de', giro)
-
-    def abono(self, abono):
-        self.saldo += abono
-        print('Se ha abonado la cantidad de', abono)
-
-    def consulta_saldo(self):
-        print('El saldo actual es', self.saldo)
-
-
-class Terreno: # Miguel #ZeroDivisionError #­­ GeneratorExit
-    
-    # 6 atributos y 6 metodos OK
-
-    nombre_dueño_terreno = 'Metropolis'
-    seguros = 'terreno con seguros comprometidos'
-    tipo = 'terreno privado'
-    sector = 'urbano'
-    finalidad = 'Habitacional'
-    extensiones = 'Para fines de contruccion horizontal y vertical'
-    
-    def __init__(self, nombre_terreno):
-        self.nombre_terreno = nombre_terreno
-
-    def consulta_hta(self):
-        print('Las hectareas edificafles consisten en 10 hectareas')
-
-    def factibilidad_agua_potable(self):
-        print('100 por ciento de factibilidad de agua potable')
-
-    def factibilidad_electricidad(self):
-        print('100 por ciento de factibilidad de electricidad')
-        
-
-    def factiilidad_servicios_digitales(self):
-        self.message = '100 por ciento de factibilidad de servicios digitales'
-        self.naci_aqui = 'Soy un mensaje que viene de la clase Terreno'
-        return self.message, self.naci_aqui
-
-    def seguridad_terreno(self):
-        print('El terreno cuenta con todas las normas de seguridad para construir')
 
 
 
 
-input()
->>>>>>> 33da4939bd82013288c9023ef0ebebf744158894
+
+
+
+
+
+
+
+
+
+
+
