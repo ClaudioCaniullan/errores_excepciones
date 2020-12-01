@@ -1,8 +1,3 @@
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 # Utilizar encapsulamiento
 # Discutir en grupo sobre el uso de variables de esta forma
 # Que es name mangling 
@@ -13,10 +8,7 @@
 
 ''' Crear 2 instancias de edificios y 2 de condominios horizaontales y demuestre la utilizacion de atributos y metodos '''
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
@@ -77,39 +69,19 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
         print('Servicio de jardinerai gratis para propietarios')
 
 
-<<<<<<< HEAD
-
-class Guardia: # Seba #  1xArithmeticError # 2xTypeError #Exception
-=======
 print("-----------Error ValueError, TypeError, ArithmeticError, Exception-----------")
 class Guardia: # Seba #  1xArithmeticError # 1ValueError #2TypeError
->>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
     # 3 atributos y 4 metodos OK
 
     empresa_contratista = 'Tus guardias'
     tipo_contrato = 'Contrato de plata'
     sueldo_bruto = '800.000 mil pesos'
 
-<<<<<<< HEAD
-    
-=======
->>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
     def __init__(self, nombre, rut, sexo):
         self.nombre = nombre
         self.rut = rut
         self.sexo = sexo
 
-<<<<<<< HEAD
-    def desayunar(self):
-        print("8:00 am hora de desayunar en el casino")
-
-    def almuerzo(self):
-        print('13:00 pm hora de almorzar en el casino')
-
-    def fin_jornada(self):
-        print('17:00 pm hora de fin de jornada')
-
-=======
     def marcar_desayuno(self):
       while True:
         try:
@@ -164,7 +136,6 @@ guardia_1 = Guardia("Sebastian", "17920757-5","M") #Se crea instancia Guardia
 guardia_1.remuneraciones_guardia() # datos solicitados por pantalla , se genera error 
 guardia_1.marcar_desayuno() #datos solicitados por pantalla 
 guardia_1.vacaciones_guardia() #error aritmetico
->>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 
 
 class UnidadHabitacional: # Valentina # 1xAttributeError # 1xLookupError
@@ -256,10 +227,7 @@ cuenta1.consulta_saldo()
 print("Ejecucion de la transaccion finalizada")
 
 print("----------- errores de SyntaxError-----------")
-<<<<<<< HEAD
-=======
 
->>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 class Terreno: # Miguel ZeroDivisionError, GeneratorExit
 
     
@@ -304,13 +272,6 @@ class Terreno: # Miguel ZeroDivisionError, GeneratorExit
     def seguridad_terreno(self):
         print('El terreno cuenta con todas las normas de seguridad para construir')
 
-<<<<<<< HEAD
-    
-
-        
-
-print(" -------- Errores de ValueError ---------")
-=======
     def divisor_terreno(self): # ZeroDivisionError
          #Indica en cuantas partes iguales puede dividir su terreno, ingresando parametro por usuario 
 
@@ -318,7 +279,6 @@ print(" -------- Errores de ValueError ---------")
        
 
 
->>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     __direccion = "Las blancas palomas 1457, Buin"
     lista_administrador = []
@@ -375,20 +335,6 @@ class Condominio: # Claudio  ## 1xStopIteration, 3xValueError
     def ServidioJardineria(self):
         print('Servicio de jardinerai gratis para propietarios')
 
-<<<<<<< HEAD
-try:
-    numero = int(input('Marque 911:'))
-                    
-except ValueError:
-    print('No marcaste correctamente')
-
-
-    # FALTA 1xStopIteration
-    # 1xValueError
-    
-
-=======
->>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
 
 print("----------Errores de AttributeError, LookupError------------")
 '''Errores:  Valentina- 1xAttributeError -1xLookupError
@@ -413,22 +359,6 @@ while True:
         print(f"[Error Lookup]: {a}\n")
         break  
 
-<<<<<<< HEAD
-
-
-
-print("-------Errores de ZeroDivisionError--------")
-divisor1 = 1000
-divisor = int(input("Ingrese el numero de partes igual que desea para su terreno de mil m²\n>>> "))
-        
-try:
-    resultado = divisor1 // divisor
-    print('si divides tu terreno por', divisor, 'cada uno de ellos tendra', resultado, 'm²')
-except ZeroDivisionError:
-    print("Realizaste una division por 0, espero disfrutes tu terreno de mil metros 'SOLO'")
-finally:
-    print("Gracias por usar la superCalculadora todo terreno")
-=======
 print("---------Error StopIteration, ValueError-----------")
 class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
     __direccion = "Las blancas palomas 1457, Buin"
@@ -518,24 +448,3 @@ condominio1.Emergencia()
 #1xStopIteration
 condominio1.ServidioJardineria()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 700057a37a54f323886f29794999a7b29d1550ca
