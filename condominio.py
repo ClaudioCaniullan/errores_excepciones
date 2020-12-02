@@ -62,7 +62,7 @@ class Condominio: # Claudio  ## 1xStopIteration, 1xValueError
             l =next(g)
             print(l)
             m= next(g)
-            print(m)
+            print(m)n
             # este tercer elemento deberia generar un StopIteration
             n = next(g)
         except:
